@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 interface Props {
   onClick: () => void;
 }
 
 const Alert = ({ onClick }: Props) => {
-  return (
+  const [show, setShow] = useState(true);
+
+  return ( 
     <div
       className="alert alert-warning alert-dismissible fade show"
       role="alert"
